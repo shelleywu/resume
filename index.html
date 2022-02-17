@@ -1,0 +1,189 @@
+<!--
+    Title: Resume Website
+    Author: Shelley
+    Created: June 16, 2018 
+    Modified: June 18, 2018 
+-->
+
+<!DOCTYPE html>
+<head>
+<title>Hello! Welcome to Shelley's Webpage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Libraries -->
+<link href='http://fonts.googleapis.com/css?family=Just+Another+Hand' rel='stylesheet' type='text/css'>
+<link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- CSS stylesheets -->
+<link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+
+</head>
+
+<body>
+    <div>
+        <div class="screen"></div>
+        <div class="keyboard"></div>
+        <div class="mouse"></div>
+        <div class='keys'></div>
+        <div class="pensholder"></div>
+        <div class="pensholder-inside"></div>
+        <div class="pen1"></div>
+        <div class="pen2"></div>
+
+        <!-- terminal pop-up -->
+        <p class="line1">></div><span class="blinking-cursor">_</span></p>
+
+        <!-- buttons to resume -->
+        <div id="stickynotes1">
+          <h3>resume</h3>
+        </div>
+        <div class="stickyshine1"></div>
+
+        <!-- buttons to projects -->
+        <div id="stickynotes2">
+          <h3>TODO: projects</h3>
+        </div>
+        <div class="stickyshine2"></div>
+
+        <!-- resume pop-up -->
+        <div id= "resume">
+            <font color="white">
+                <h2>Shelley</h2>
+
+                <!-- profile photo-->
+                <p><img src="https://raw.githubusercontent.com/shelleywu/resume/master/ShelleyWu.JPG" alt="business casual" width="275" height="250"> </p>
+
+                <!-- social media -->
+                <a href="mailto:?Subject=Hello%20from%20your%20website!%20"target="_top"><i class="fa fa-envelope"></i> </a>
+
+                <a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+
+                <a href="http://xiaolidev.blogspot.com/" target="_blank"><i class="fa fa-pencil-square"></i></a>
+
+                <a href="https://github.com/shelleywu" target="_blank"><i class="fa fa-github-alt"></i></a>
+
+                <!-- resume -->
+               
+                <p>Virtual Reality Researcher, San Jose State University, San Jose CA <i>Mar 2017 - May 2017</i></p>
+                 <ul><li>Noted any topics and resources to understand over 49 privately-sourced projects from , an over 20-years-old virtual reality system, for a graduate course.</li>
+                  <li>Presented introduction and demonstrations about the Xulu system to students and professionals at the lab.</li>
+                    <li>Documented thorough instructions on setup, installation, and advanced topics.</li></ul>
+
+                <p>Student Grader for Introduction Artificial Intelligence course, San Jose State University, San Jose CA <i>Sept 2016 - Dec 2016</i></p>
+                  <ul><li>Graded undergraduate and graduate students' homework.</li>
+                    <li>Reported to professor about student work and overall performance.</li>
+                    <li>Answered any students' questions and concerns.</li>
+                  </ul>
+                  
+                      <p>Information Technology Analyst Intern, Santa Clara Valley Water District, Santa Clara CA <i>Jun 2016 - Aug 2016</i></p>
+                  <ul><li>Revamped a 15-years-old database from Microsoft Access to Oracle Apex.</li>
+                    <li>Suggested low-cost effective improvements to the official website and other company websites.</li>
+                    <li> Answered employees' concerns and questions when upgrading softwares. </li>
+                  </ul>
+
+                  <p><i class="fa fa-laptop"></i><strong> Technical Skills</strong></p>
+                <p>Programming - Python, Java, C. Database. Research. Android Development. Game Development - Unity. Web Development - Front-end.</p>
+
+                <p><i class="fa fa-asterisk"></i><strong> Other Interests</strong></p>
+                <p>Exercise - Running, Weight Lifting, Swimming. Cooking. Movies. Hot pot - Shabu Shabu. Board and Card Games.</p>
+            </font> 
+        </div>
+
+        <!-- projects pop-up -->
+        <div id="projects">
+            <font color="white">
+                <h2>Semi-Autonomous Robot</h2>
+                <iframe width="450" height="300" src="https://www.youtube.com/embed/pu6evmJ-aMc"></iframe>
+                <p>Arduino robot that avoids obstacles.</p>
+
+                <h2>Rotten Egg</h2>
+                <iframe width="450" height="300" src="https://www.youtube.com/embed/DTFzNmlrTrc"></iframe>
+                <p>Android app for movie lovers.</p>
+
+                <h2>OverView</h2>
+                <iframe width="450" height="300" src="https://www.youtube.com/embed/qxHUgo5nIQQ"></iframe>
+                <p>Categorized as Best Design at Microsoft Holographic Hackathon.</p>
+
+            </font> 
+        </div>
+
+        <!-- resume buttons -->
+        <div id="resume-menu">
+            <center>ShelleyWu-Resume</center>
+        </div>
+        <div id="resume-dot"></div>
+        <div id="resume-yellow"></div>
+        <div id="resume-green"></div>
+
+        <div id="projects-menu">
+            <center>ShelleyWu-Projects</center>
+        </div>    
+          <div id="projects-dot"></div>
+          <div id="projects-yellow"></div>
+          <div id="projects-green"></div>
+
+    </div>
+
+<script>
+
+document.getElementById("resume-dot").addEventListener("click", closeResume);
+
+document.getElementById("projects-dot").addEventListener("click", closeProjects);
+
+document.getElementById("stickynotes1").addEventListener("click", openResume);
+
+document.getElementById("stickynotes2").addEventListener("click", openProjects);
+
+    function closeResume(){
+        var a = document.getElementById("resume-dot");
+        var w = document.getElementById("resume");
+        var x = document.getElementById("resume-yellow");
+        var y = document.getElementById("resume-green");
+        var z = document.getElementById("resume-menu");
+        a.style.display = "none";
+        w.style.display = "none";
+        x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "none";
+    }
+
+    function closeProjects(){
+        var a = document.getElementById("projects-dot");
+        var w = document.getElementById("projects");
+        var x = document.getElementById("projects-yellow");
+        var y = document.getElementById("projects-green");
+        var z = document.getElementById("projects-menu");
+        a.style.display = "none";
+        w.style.display = "none";
+        x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "none";
+    }
+
+    function openResume(){
+        var a = document.getElementById("resume-dot");
+        var w = document.getElementById("resume");
+        var x = document.getElementById("resume-yellow");
+        var y = document.getElementById("resume-green");
+        var z = document.getElementById("resume-menu");
+        a.style.display = "initial";
+        w.style.display = "initial";
+        x.style.display = "initial";
+        y.style.display = "initial";
+        z.style.display = "initial";
+
+    }
+
+    function openProjects(){
+        var a = document.getElementById("projects-dot");
+        var w = document.getElementById("projects");
+        var x = document.getElementById("projects-yellow");
+        var y = document.getElementById("projects-green");
+        var z = document.getElementById("projects-menu");
+        a.style.display = "initial";
+        w.style.display = "initial";
+        x.style.display = "initial";
+        y.style.display = "initial";
+        z.style.display = "initial";
+    }
+</script>    
+</body>
+</html>
